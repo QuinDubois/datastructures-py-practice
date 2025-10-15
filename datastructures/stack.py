@@ -17,7 +17,7 @@ class Stack:
     def pop(self):
         try:
             item = self.stack[len(self.stack)-1]
-            self.stack.remove(len(self.stack)-1)
+            self.stack.remove(self.stack[len(self.stack)-1])
             return item
         except IndexError:
             print("IndexError: Index outside of Stack.")

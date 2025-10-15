@@ -16,7 +16,9 @@ class Stack:
     # Pop (remove) an item from the top of the stack.
     def pop(self):
         try:
-            return self.stack.remove(len(self.stack)-1)
+            item = self.stack[len(self.stack)-1]
+            self.stack.remove(len(self.stack)-1)
+            return item
         except IndexError:
             print("IndexError: Index outside of Stack.")
         except ValueError:
